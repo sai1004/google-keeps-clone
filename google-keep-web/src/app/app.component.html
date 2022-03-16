@@ -1,0 +1,43 @@
+<mat-toolbar color="accent">
+    <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+        (click)="snav.toggle()"
+    >
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="mat__spacer"></span>
+    <input class="search__query" type="search" [(ngModel)]="searchQuery" name="searchQuery" placeholder="Search.." />
+    <button mat-icon-button>
+        <mat-icon> refresh </mat-icon>
+    </button>
+    <button mat-icon-button>
+        <mat-icon> settings </mat-icon>
+    </button>
+    <button mat-icon-button>
+        <mat-icon> person_outline </mat-icon>
+    </button>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav
+        #snav
+        role="navigation"
+        [opened]="screenWidth > 840"
+        [mode]="screenWidth > 840 ? 'side' : 'over'"
+        class="side-nav-bg"
+    >
+        <mat-nav-list>
+            <mat-list-item> Notes </mat-list-item>
+            <mat-list-item> Edit Labels </mat-list-item>
+            <mat-list-item> Archive </mat-list-item>
+            <mat-list-item> Trash </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <main class="main__app">
+            <router-outlet></router-outlet>
+        </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>

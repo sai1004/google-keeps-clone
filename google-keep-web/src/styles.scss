@@ -1,0 +1,54 @@
+/*  Box Sizing  */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+@import "./styles/variables.scss";
+@import "./styles/custom.scss";
+@import "./styles/theme.scss";
+
+.primary-color {
+    color: mat-color($primary) !important;
+}
+
+.accent-color {
+    color: mat-color($accent) !important;
+}
+
+.side-nav-bg {
+    background-color: mat-color($primary) !important;
+}
+
+.active__route {
+    color: mat-color($accent) !important;
+    border-left: 4px solid mat-color($accent);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
