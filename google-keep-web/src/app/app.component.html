@@ -29,10 +29,13 @@
         class="side-nav-bg"
     >
         <mat-nav-list>
-            <mat-list-item> Notes </mat-list-item>
-            <mat-list-item> Edit Labels </mat-list-item>
-            <mat-list-item> Archive </mat-list-item>
-            <mat-list-item> Trash </mat-list-item>
+            <ng-container *ngFor="let menu of menusList">
+                <mat-list-item>
+                    <mat-icon>{{ menu.icon }}</mat-icon>
+                    <span class="menu__name">{{ menu.name }}</span>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </ng-container>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
