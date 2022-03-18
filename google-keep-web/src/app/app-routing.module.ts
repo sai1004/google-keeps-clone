@@ -6,7 +6,7 @@ import { TrashPageComponent } from './pages/trash-page/trash-page.component';
 
 const routes: Routes = [
     {
-        path: '',
+        path: 'notes',
         component: NotesPageComponent,
     },
     {

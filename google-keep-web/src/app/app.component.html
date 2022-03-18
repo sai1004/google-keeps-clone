@@ -7,6 +7,9 @@
     >
         <mat-icon>menu</mat-icon>
     </button>
+
+    <span> Notes </span>
+
     <span class="mat__spacer"></span>
     <input class="search__query" type="search" [(ngModel)]="searchQuery" name="searchQuery" placeholder="Search.." />
     <button mat-icon-button>
@@ -30,7 +33,7 @@
     >
         <mat-nav-list>
             <ng-container *ngFor="let menu of menusList">
-                <mat-list-item>
+                <mat-list-item [routerLink]="menu.route" routerLinkActive="active__route">
                     <mat-icon>{{ menu.icon }}</mat-icon>
                     <span class="menu__name">{{ menu.name }}</span>
                 </mat-list-item>
