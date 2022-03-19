@@ -5,6 +5,7 @@ import { NotesPageComponent } from './pages/notes-page/notes-page.component';
 import { TrashPageComponent } from './pages/trash-page/trash-page.component';
 
 const routes: Routes = [
+    { path: '', pathMatch: 'full', redirectTo: 'notes' },
     {
         path: 'notes',
         component: NotesPageComponent,

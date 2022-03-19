@@ -4,14 +4,14 @@
     </div>
 
     <div cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
-        <!-- <div fxLayout="row wrap" fxLayoutAlign="space-around"> -->
-        <ng-container *ngFor="let timePeriod of timePeriods">
-            <div>
-                <mat-card cdkDrag>
-                    <h4>{{ timePeriod }}</h4>
-                </mat-card>
-            </div>
-        </ng-container>
-        <!-- </div> -->
+        <div fxLayout="row wrap" fxLayoutAlign="space-around stretch">
+            <ng-container *ngFor="let timePeriod of timePeriods">
+                <div>
+                    <mat-card cdkDrag>
+                        <h4>{{ timePeriod }}</h4>
+                    </mat-card>
+                </div>
+            </ng-container>
+        </div>
     </div>
 </section>
